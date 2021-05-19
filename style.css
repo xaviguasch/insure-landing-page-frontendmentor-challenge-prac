@@ -190,26 +190,31 @@ img {
   justify-content: center;
   align-items: center;
 
-  background: var(--clr-white);
+  background: var(--clr-very-dark-violet);
   position: fixed;
-  top: -500px;
-  right: 30px;
-  left: 30px;
+  top: -120vh;
+  right: 0;
+  left: 0;
 
   border-radius: 0.25em;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 4px 4px -1px;
-  height: 42%;
+  height: 100%;
   margin: 0 auto;
-  width: 80%;
-  max-width: 410px;
+  width: 100%;
+  max-width: 450px;
   z-index: 10;
 
   transform: translateY(0%);
   transition: transform 350ms;
 }
 
+.close-nav {
+  margin-right: 2em;
+  margin-top: 0.18em;
+}
+
 .navigation-open {
-  transform: translateY(600px);
+  transform: translateY(109vh);
 }
 
 .nav-list {
@@ -226,16 +231,6 @@ img {
 .nav-item {
   margin: 0.5em auto;
   padding: 0.5em 0;
-}
-
-.nav-item:nth-of-type(3) {
-  /* Flex properties */
-  display: flex;
-  justify-content: center;
-
-  border-bottom: 2px solid var(--clr-light-grayish-blue);
-  padding-bottom: 1em;
-  width: 80%;
 }
 
 .close-nav {
@@ -264,6 +259,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 }
 
 .section-a__one {
@@ -444,10 +441,7 @@ img {
   margin-top: 1em;
 }
 
-/* ================== */ /* ================== */ /* ================== */
-
-.img-desktop {
-  display: none;
+.signatue-footer {
 }
 
 .attribution {
@@ -456,4 +450,171 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1001px) {
+  /* Typography */
+  .title {
+    font-size: var(--fs-72);
+  }
+
+  /* Utility styles */
+  .wrapper {
+    max-width: unset;
+  }
+
+  /* SECTIONS */
+  .header {
+    /* Flex properties */
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0em 5em;
+  }
+
+  .open-nav {
+    display: none;
+  }
+
+  .close-nav {
+    display: none;
+  }
+
+  .nav {
+    background: unset;
+    box-shadow: unset;
+    height: unset;
+    position: initial;
+    width: unset;
+    max-width: unset;
+    max-width: unset;
+    margin: 0;
+  }
+
+  .nav-link {
+    color: var(--clr-dark-grayish-violet);
+    font-size: var(--fs-13);
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--clr-very-dark-violet);
+    text-decoration: none;
+  }
+
+  .nav-link.nav-link--accent {
+    color: var(--clr-very-dark-violet);
+    border: 2px solid var(--clr-very-dark-violet);
+    padding: 0.75em 2em;
+  }
+
+  .nav-link.nav-link--accent:hover,
+  .nav-link.nav-link--accent:focus {
+    background-color: var(--clr-very-dark-violet);
+    color: var(--clr-white);
+  }
+
+  .nav-list {
+    /* Flex properties */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    height: 100%;
+    padding: 1em 0;
+  }
+
+  .main::before {
+    display: block;
+    content: '';
+    position: absolute;
+
+    background-image: url('./images/bg-pattern-intro-right-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 100% -40%;
+    background-size: 27%;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 10;
+  }
+
+  .section-a {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5em;
+
+    background-color: var(--clr-dark-violet);
+
+    padding: 9em 5em 8em;
+  }
+
+  .section-a__one::before {
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: var(--clr-white);
+    top: -55px;
+    left: 0%;
+    opacity: 0.5;
+
+    width: 25%;
+    margin: 0 auto;
+    height: 1.5px;
+  }
+
+  .section-a__one {
+    /* Flex properties */
+    order: 0;
+
+    background: unset;
+
+    padding: 0;
+
+    text-align: left;
+
+    width: 45%;
+    margin: 0;
+    max-width: 580px;
+  }
+
+  .section-a__one .copy-text {
+    width: 100%;
+    margin: 1em auto 3em;
+  }
+
+  .section-a__two {
+    background-image: url('./images/image-intro-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 540px;
+    height: 650px;
+
+    position: absolute;
+
+    top: 5em;
+    left: 50%;
+  }
+
+  .section-b {
+    padding: 30em 5em 10em;
+
+    z-index: 5;
+
+    position: relative;
+    background-image: url('./images/bg-pattern-intro-left-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 10%;
+    margin-top: -8em;
+    z-index: 5;
+  }
+
+  .section-b .title {
+    text-align: left;
+  }
 }
