@@ -38,7 +38,8 @@
   --fs-36: 2.25rem;
   --fs-40: 2.5rem;
   --fs-48: 3rem;
-  --fs-60: 3.5rem;
+  --fs-56: 3.5rem;
+  --fs-60: 3.75rem;
   --fs-64: 4rem;
   --fs-72: 4.5rem;
   --fs-80: 5rem;
@@ -614,7 +615,64 @@ img {
     z-index: 5;
   }
 
+  .section-b .title::before {
+    top: -60px;
+    left: 7%;
+    width: 15%;
+  }
+
   .section-b .title {
     text-align: left;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .feature {
+    align-items: flex-start;
+  }
+
+  .feature .copy-text {
+    width: 100%;
+
+    text-align: left;
+    max-width: 350px;
+  }
+
+  .section-c {
+    max-width: 1100px;
+
+    margin: 0 auto;
+    background-color: var(--clr-dark-violet);
+    padding: 3em 4em;
+
+    background-image: url('./images/bg-pattern-how-we-work-desktop.svg');
+    background-size: 40%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section-c .title {
+    font-size: var(--fs-56);
+    margin-bottom: unset;
+
+    width: 500px;
+    text-align: left;
+  }
+
+  .footer {
+    background-image: url('./images/bg-pattern-footer-desktop.svg');
+    background-size: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5em 1.25em 0.5em;
   }
 }
