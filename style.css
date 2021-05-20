@@ -668,11 +668,39 @@ img {
     background-image: url('./images/bg-pattern-footer-desktop.svg');
     background-size: 50%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    padding: 5em 1.25em 0.5em;
+    padding: 5em 5em 0.5em;
+  }
+
+  .upper-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    width: 100%;
+
+    padding-bottom: 2em;
+  }
+
+  .upper-footer::after {
+    width: 100%;
+  }
+
+  .lower-footer {
+    padding: 3em 0 5em;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;
+  }
+
+  .col {
+    align-items: flex-start;
+  }
+
+  .signature-footer {
+    width: 100%;
   }
 }
