@@ -88,7 +88,14 @@ img {
 }
 
 .nav-link--accent {
+  /* border: 2px solid var(--clr-white); */
+  width: 100%;
+  padding: 0.5em;
+}
+
+.nav-item--accent {
   border: 2px solid var(--clr-white);
+  width: 90%;
 }
 
 .title {
@@ -516,6 +523,11 @@ img {
 
     height: 100%;
     padding: 1em 0;
+  }
+
+  .nav-item--accent {
+    border: unset;
+    width: unset;
   }
 
   .main::before {
