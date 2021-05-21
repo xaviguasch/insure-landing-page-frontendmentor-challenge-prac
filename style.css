@@ -205,12 +205,6 @@ img {
   z-index: 10;
 }
 
-.close-nav {
-  position: absolute;
-  margin-right: 2em;
-  margin-top: -0.55em;
-}
-
 .navigation-open {
   transform: translateX(-100%);
 }
@@ -238,8 +232,8 @@ img {
   padding: 0.25em;
   position: absolute;
 
-  top: -55px;
-  right: -10px;
+  top: -62px;
+  right: 17px;
 }
 
 .open-nav {
